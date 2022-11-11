@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-import {name} from '../src/cli.js';
-console.log("Welcome to the Brain Games!")
+import yourName from '../src/cli.js';
 
-name()
+console.log('Welcome to the Brain Games!');
+
+yourName();
