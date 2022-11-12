@@ -7,7 +7,7 @@ const askName = () => {
   return name;
 };
 
-const game = () => {
+export default () => {
   const name = askName();
   let count = 0;
   while (count < 3) {
@@ -28,5 +28,3 @@ const game = () => {
     console.log(`Congratulations, ${name}!`);
   }
 };
-
-export { askName, game };
