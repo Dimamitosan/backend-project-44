@@ -4,4 +4,4 @@ import game from '../src/games-logic.js';
 
 console.log('Welcome to the Brain Games!');
 
-game('even');
+game('culc');
