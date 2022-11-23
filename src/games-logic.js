@@ -79,6 +79,25 @@ const even = {
   },
 };
 
+const prime = {
+  start: 'Answer "yes" if given number is prime. Otherwise answer "no".',
+  question_qwe() {
+    const [number] = random(1);
+    let flag = true;
+    console.log(`Question ${number}`);
+    for (let i = 2; i <= number ** (0.5); i++) {
+      if (number % i === 0) {
+        flag = false;
+      }
+    }
+    if (flag) {
+      return 'yes';
+    }
+    return 'no';
+  },
+
+};
+
 export default (n) => {
   if (n === 'culc') {
     n = culc;
@@ -88,6 +107,8 @@ export default (n) => {
     n = gcd;
   } else if (n === 'progression') {
     n = progressionGame;
+  } else if (n === 'prime') {
+    n = prime;
   }
   const name = askName();
   let count = 0;
