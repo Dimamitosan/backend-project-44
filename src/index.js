@@ -122,7 +122,6 @@ export default (n) => {
     } else {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer1}'`);
       console.log(`Let's try again ${name}`);
-      count = 0;
     }
     if (count === 3) {
       console.log(`Congratulations, ${name}!`);
