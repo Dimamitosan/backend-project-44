@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/Dimamitosan/backend-project-44#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   },
   "bin": {
