@@ -19,7 +19,7 @@ export default (logic,start) => {
     } else {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       console.log(`Let's try again ${name}`);
-      return
+      count = -1
     }  
   }
     console.log(`Congratulations, ${name}!`);
