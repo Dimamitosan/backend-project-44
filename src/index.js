@@ -21,7 +21,7 @@ export default (logic,start) => {
     } else {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       console.log(`Let's try again ${name}`);
-      count =0
+      return
     }  
     if (count ===3){
       console.log(`Congratulations, ${name}!`);
