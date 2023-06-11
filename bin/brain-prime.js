@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games-logic.js';
+import prime from '../src/games/brain-prime.js';
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('prime');
+engine(prime, 'Answer "yes" if given number is prime. Otherwise answer "no".');

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games-logic.js';
+import even from '../src/games/brain-even.js';
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('even');
+engine(even, 'Answer "yes" if the number is even, otherwise answer "no".');

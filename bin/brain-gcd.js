@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games-logic.js';
+import gcd from '../src/games/brain-gcd.js';
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('gcd');
+engine(gcd, 'Find the greatest common divisor of given numbers.');

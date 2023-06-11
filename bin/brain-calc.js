@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games-logic.js';
+import culc from '../src/games/brain-calc.js';
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('culc');
+engine(culc, 'What is the result of the expression?');

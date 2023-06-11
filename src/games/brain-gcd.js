@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 
-import game from '../index.js';
+import random from '../../random.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('gcd');
+export default () => {
+  let firstNumber = random();
+  let secondNumber = random();
+  const question = `Question: ${firstNumber} ${secondNumber}`;
+  while (secondNumber !== 0) {
+    if (firstNumber > secondNumber) {
+      firstNumber -= secondNumber;
+    } else {
+      secondNumber -= firstNumber;
+    }
+  }
+  const rightAnswer = String(firstNumber);
+  return [question, rightAnswer];
+};

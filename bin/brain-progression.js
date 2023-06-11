@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games-logic.js';
+import progressionGame from '../src/games/brain-progression.js';
+import engine from '../src/index.js';
 
-console.log('Welcome to the Brain Games!');
-
-game('progression');
+engine(progressionGame, 'What number is missing in the progression?');

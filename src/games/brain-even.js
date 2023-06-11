@@ -1,7 +1,10 @@
 #!/usr/bin/env node
+import random from '../../random.js';
 
-import game from '../index.js';
-
-console.log('Welcome to the Brain Games!');
-
-game('even');
+export default () => {
+  const number = random();
+  const question = `Question: ${number}`;
+  let rightAnswer;
+  number % 2 === 0 ? rightAnswer = 'no' : rightAnswer = 'yes';
+  return [question, rightAnswer];
+};
