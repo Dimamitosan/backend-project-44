@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-import random from '../../random.js';
+import random from '../random.js';
+import runEngine from '../src/index.js';
 
-export default () => {
+
+const prog = () => {
   const progression = [];
   const number = random();
   const endOfProgression = random(1, 5);
@@ -15,3 +17,7 @@ export default () => {
   const question = `Question: ${progression.join(' ')}`;
   return [question, rightAnswer];
 };
+
+export default ()=>{
+  runEngine(prog,'What number is missing in the progression?')
+}

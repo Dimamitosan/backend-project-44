@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import random from '../../random.js';
-import engine from '../index.js';
+import random from '../random.js';
+import runEngine from '../index.js';
 
 const prime = () => {
   const number = random(1, 10);
@@ -19,4 +19,7 @@ const prime = () => {
   return [question, rightAnswer];
 };
 
-engine(prime, 'Answer "yes" if given number is prime. Otherwise answer "no".');
+export default ()=>{
+ runEngine(prime,'Answer "yes" if given number is prime. Otherwise answer "no".')
+}
+

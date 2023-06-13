@@ -10,21 +10,17 @@ export default (logic,start) => {
   console.log('Welcome to the Brain Games!');
   const name = askName();
   console.log(start)
-  let count = 0;
-  while(count <3) {
+  const end = 3;
+  for(let count = 0;count < end;count++) {
     const [question,rightAnswer] = logic() 
     console.log(question)
     const yourAnswer = readlineSync.question('Your answer: ');
-    if (rightAnswer === yourAnswer) {
-      console.log('Correct');
-      count +=1
-    } else {
+    if (rightAnswer !== yourAnswer) {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       console.log(`Let's try again ${name}`);
       return
-    }  
-    if (count ===3){
-      console.log(`Congratulations, ${name}!`);
     }
+    console.log('Correct');
   }
+  console.log(`Congratulations, ${name}!`);
 }

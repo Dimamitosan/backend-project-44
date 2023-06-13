@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-import random from '../../random.js';
+import random from '../random.js';
+import runEngine from '../src/index.js';
 
-export default () => {
+const gcd = () => {
   let firstNumber = random();
   let secondNumber = random();
   const question = `Question: ${firstNumber} ${secondNumber}`;
@@ -16,3 +17,7 @@ export default () => {
   const rightAnswer = String(firstNumber);
   return [question, rightAnswer];
 };
+
+export default ()=>{
+  runEngine(gcd,'Find the greatest common divisor of given numbers.')
+}
