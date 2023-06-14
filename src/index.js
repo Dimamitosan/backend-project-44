@@ -17,7 +17,7 @@ export default (logic,start) => {
     const yourAnswer = readlineSync.question('Your answer: ');
     if (rightAnswer !== yourAnswer) {
       console.log(`'${yourAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
-      console.log(`Let's try again ${name}`);
+      console.log(`Let's try again, ${name}`);
       return
     }
     console.log('Correct');
