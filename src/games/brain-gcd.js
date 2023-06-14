@@ -1,23 +1,28 @@
-#!/usr/bin/env node
-
 import random from '../random.js';
-import runEngine from '../src/index.js';
+import runEngine from '../index.js';
 
+const start = 'Find the greatest common divisor of given numbers.';
+
+
+const findGcd = (firstNum, secondNum)=>{
+  while (secondNum !== 0) {
+    if (firstNum > secondNum) {
+      firstNum -= secondNum;
+    } else {
+      secondNum -= firstNum;
+    }
+  }
+  return firstNum
+}
 const gcd = () => {
   let firstNumber = random();
   let secondNumber = random();
   const question = `Question: ${firstNumber} ${secondNumber}`;
-  while (secondNumber !== 0) {
-    if (firstNumber > secondNumber) {
-      firstNumber -= secondNumber;
-    } else {
-      secondNumber -= firstNumber;
-    }
-  }
-  const rightAnswer = String(firstNumber);
+  
+  const rightAnswer = String(findGcd(firstNumber,secondNumber));
   return [question, rightAnswer];
 };
 
 export default ()=>{
-  runEngine(gcd,'Find the greatest common divisor of given numbers.')
+  runEngine(gcd,start)
 }

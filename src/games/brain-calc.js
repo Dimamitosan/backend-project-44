@@ -1,17 +1,29 @@
-#!/usr/bin/env node
 import random from '../random.js'
 import runEngine from '../index.js';
 
 
+const start = 'What is the result of the expression?';
 const calc = () => {
     const firstNumber = random();
     const secondNumber = random();
-    const math = ['*', '+', '-'][random(0,2)];
-    const question = `Question: ${firstNumber}  ${math}  ${secondNumber}`;
-    const rightAnswer = String(eval(`${firstNumber} ${math} ${secondNumber}`)) 
-    return [question,rightAnswer];
+    const arrOfOperators = ['*', '+', '-'];
+    const math = arrOfOperators[random(0,arrOfOperators.length)]
+    let rightAnswer;
+    switch (math){
+        case '+': 
+            rightAnswer = firstNumber + secondNumber
+            break
+        case '-': 
+            rightAnswer = firstNumber - secondNumber
+            break
+        case '*': 
+            rightAnswer = firstNumber * secondNumber
+            break
+    }
+    const question = `Question: ${firstNumber} ${math} ${secondNumber}`; 
+    return [question,String(rightAnswer)];
 }
 
 export default () =>{
-    runEngine(calc, 'What is the result of the expression?')
+    runEngine(calc, start)
 }

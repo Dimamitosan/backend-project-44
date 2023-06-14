@@ -1,9 +1,9 @@
-#!/usr/bin/env node
 import random from '../random.js';
-import runEngine from '../src/index.js';
+import runEngine from '../index.js';
 
+const start = 'What number is missing in the progression?';
 
-const prog = () => {
+const genProg = () => {
   const progression = [];
   const number = random();
   const endOfProgression = random(1, 5);
@@ -11,6 +11,11 @@ const prog = () => {
     progression.push(i);
     i += number;
   }
+  return progression
+}
+
+const prog = () => {
+  const progression = genProg()
   const possition = random(1, progression.length);
   const rightAnswer = String(progression[possition]);
   progression[possition] = '..';
@@ -19,5 +24,5 @@ const prog = () => {
 };
 
 export default ()=>{
-  runEngine(prog,'What number is missing in the progression?')
+  runEngine(prog,start)
 }
