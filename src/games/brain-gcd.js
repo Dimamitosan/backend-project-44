@@ -3,7 +3,9 @@ import runEngine from '../index.js';
 
 const start = 'Find the greatest common divisor of given numbers.';
 
-const findGcd = (firstNum, secondNum) => {
+const findGcd = (first, second) => {
+  let firstNum = first;
+  let secondNum = second;
   while (secondNum !== 0) {
     if (firstNum > secondNum) {
       firstNum -= secondNum;

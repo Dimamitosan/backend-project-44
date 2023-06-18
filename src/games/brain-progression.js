@@ -3,7 +3,8 @@ import runEngine from '../index.js';
 
 const start = 'What number is missing in the progression?';
 
-const genProg = (number, step, endOfProgression) => {
+const genProg = (firstNumber, step, endOfProgression) => {
+  let number = firstNumber;
   const progression = [];
   while (progression.length < endOfProgression + 5) {
     progression.push(number);

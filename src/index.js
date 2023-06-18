@@ -6,7 +6,7 @@ export default (logic, start) => {
   console.log(`Hello, ${name}!`);
   console.log(start);
   const end = 3;
-  for (let count = 0; count < end; count++) {
+  for (let count = 0; count < end; count += 1) {
     const [question, rightAnswer] = logic();
     console.log(question);
     const yourAnswer = readlineSync.question('Your answer: ');

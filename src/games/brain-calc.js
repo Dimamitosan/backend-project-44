@@ -13,6 +13,7 @@ const mathOp = (firstNumber, secondNumber, math) => {
     case '*':
       mathOperation = firstNumber * secondNumber;
       break;
+    default:
   }
   return mathOperation;
 };
