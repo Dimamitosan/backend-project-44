@@ -16,7 +16,7 @@ const isPrime = (number) => {
 const prime = () => {
   const number = random(1, 10);
   let flag = true;
-  const question = `Question ${number}`;
+  const question = `Question: ${number}`;
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
