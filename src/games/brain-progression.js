@@ -5,7 +5,7 @@ const start = 'What number is missing in the progression?';
 
 const genProg = (number,step,endOfProgression) => {
   const progression = [];
-  while (progression.length < endOfProgression + 5) {
+  while (progression.length <= endOfProgression + 5) {
     progression.push(number);
     number += step;
   }
