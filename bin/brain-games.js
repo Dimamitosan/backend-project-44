@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import yourName from '../cli.js';
+import yourName from '../src/cli.js';
 
 yourName();
