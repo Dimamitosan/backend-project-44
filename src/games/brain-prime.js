@@ -4,7 +4,8 @@ import runEngine from '../index.js';
 const start = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  for (let i = 2; i <= number ** (0.5); i++) {
+  const numSqrt = number**(0.5) 
+  for (let i = 2; i <= numSqrt; i++) {
     if (number % i === 0) {
       return false
     }

@@ -3,19 +3,17 @@ import runEngine from '../index.js';
 
 const start = 'What number is missing in the progression?';
 
-const genProg = () => {
+const genProg = (number,step,endOfProgression) => {
   const progression = [];
-  const number = random();
-  const endOfProgression = random(1, 5);
-  for (let i = random(); progression.length < endOfProgression + 5;) {
-    progression.push(i);
-    i += number;
+  while (progression.length < endOfProgression + 5) {
+    progression.push(number);
+    number += step;
   }
   return progression
 }
 
 const prog = () => {
-  const progression = genProg()
+  const progression = genProg(random(),random(),random(1,5))
   const possition = random(1, progression.length);
   const rightAnswer = String(progression[possition]);
   progression[possition] = '..';

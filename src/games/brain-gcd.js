@@ -14,11 +14,12 @@ const findGcd = (firstNum, secondNum)=>{
   }
   return firstNum
 }
+
+
 const gcd = () => {
   let firstNumber = random();
   let secondNumber = random();
   const question = `Question: ${firstNumber} ${secondNumber}`;
-  
   const rightAnswer = String(findGcd(firstNumber,secondNumber));
   return [question, rightAnswer];
 };
