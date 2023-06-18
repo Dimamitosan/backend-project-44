@@ -2,5 +2,4 @@
 
 import startGame from '../src/games/brain-prime.js';
 
-
 startGame();
