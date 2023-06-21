@@ -1,14 +1,12 @@
 import random from '../random.js';
 import runEngine from '../index.js';
 
-const start = 'What number is missing in the progression?';
+const rules = 'What number is missing in the progression?';
 
-const genProg = (firstNumber, step, endOfProgression) => {
-  let number = firstNumber;
+const genProg = (firstNumber, step, length) => {
   const progression = [];
-  while (progression.length < endOfProgression + 5) {
-    progression.push(number);
-    number += step;
+  for (let i = 0; progression.length < length + 5; i += 1) {
+    progression.push(firstNumber + step * i);
   }
   return progression;
 };
@@ -23,5 +21,5 @@ const prog = () => {
 };
 
 export default () => {
-  runEngine(prog, start);
+  runEngine(prog, rules);
 };

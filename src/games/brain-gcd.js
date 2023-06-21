@@ -1,7 +1,7 @@
 import random from '../random.js';
 import runEngine from '../index.js';
 
-const start = 'Find the greatest common divisor of given numbers.';
+const rules = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (first, second) => {
   let firstNum = first;
@@ -25,5 +25,5 @@ const gcd = () => {
 };
 
 export default () => {
-  runEngine(gcd, start);
+  runEngine(gcd, rules);
 };

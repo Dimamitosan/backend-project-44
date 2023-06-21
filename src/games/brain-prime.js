@@ -1,19 +1,19 @@
 import random from '../random.js';
 import runEngine from '../index.js';
 
-const start = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  let count = 0;
-  for (let i = 1; i <= number; i += 1) {
-    if (number % i === 0) {
-      count += 1;
-    }
-  }
-  if (count === 2) {
+  const numSqrt = number ** (0.5);
+  if (number === 2) {
     return true;
   }
-  return false;
+  for (let i = 2; i <= numSqrt; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return number !== 1;
 };
 
 const prime = () => {
@@ -24,5 +24,5 @@ const prime = () => {
 };
 
 export default () => {
-  runEngine(prime, start);
+  runEngine(prime, rules);
 };
